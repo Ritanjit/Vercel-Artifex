@@ -25,6 +25,7 @@ import './globals.css'; // Tailwind and global styles
 import { ToastProvider } from "./lib/contexts/ToastContext"; // Toast Notification Message
 import { VisitorCounterProvider } from './lib/contexts/VisitorCounterContext';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 			<VisitorCounterProvider>
 				<App />
 				<Analytics />
+				<SpeedInsights />
 			</VisitorCounterProvider>
 		</ToastProvider>
 	</React.StrictMode>
