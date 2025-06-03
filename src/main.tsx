@@ -24,12 +24,14 @@ import App from './App';
 import './globals.css'; // Tailwind and global styles
 import { ToastProvider } from "./lib/contexts/ToastContext"; // Toast Notification Message
 import { VisitorCounterProvider } from './lib/contexts/VisitorCounterContext';
+import { Analytics } from '@vercel/analytics/react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<ToastProvider>
 			<VisitorCounterProvider>
 				<App />
+				<Analytics />
 			</VisitorCounterProvider>
 		</ToastProvider>
 	</React.StrictMode>
